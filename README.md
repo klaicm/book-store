@@ -2,7 +2,6 @@
 
 This is a sample online book store service built using Spring Boot v2, Java v17, and Maven. It provides REST APIs for managing books, customers, and purchases
 in a bookstore.
-Demo project for Huddle.
 
 ## Getting Started
 
