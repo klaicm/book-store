@@ -61,7 +61,6 @@ public class CustomersController {
   @Operation(summary = "Method for fetching specific customer and to see all of his purchases")
   @ApiResponses(value = {
       @ApiResponse(responseCode = "200", description = "Success"),
-      @ApiResponse(responseCode = "400", description = "Bad Request", content = {@Content(schema = @Schema(implementation = BadRequest.class))}),
       @ApiResponse(responseCode = "404", description = "Not Found", content = {@Content(schema = @Schema(implementation = CustomerNotFoundException.class))}),
       @ApiResponse(responseCode = "500", description = "Internal Server Error", content = {@Content(schema = @Schema(implementation = RuntimeException.class))})
   })
@@ -84,7 +83,6 @@ public class CustomersController {
   @Operation(summary = "Search customer by first or last name. You can enter only part of the name.")
   @ApiResponses(value = {
       @ApiResponse(responseCode = "200", description = "Success"),
-      @ApiResponse(responseCode = "400", description = "Bad Request", content = {@Content(schema = @Schema(implementation = BadRequest.class))}),
       @ApiResponse(responseCode = "500", description = "Internal Server Error", content = {@Content(schema = @Schema(implementation = RuntimeException.class))})
   })
   @GetMapping(value = "/search", produces = MediaType.APPLICATION_JSON_VALUE)

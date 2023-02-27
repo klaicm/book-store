@@ -47,7 +47,6 @@ public class BooksController {
   @Operation(summary = "Method for fetching specific book from inventory")
   @ApiResponses(value = {
       @ApiResponse(responseCode = "200", description = "Success"),
-      @ApiResponse(responseCode = "400", description = "Bad Request", content = {@Content(schema = @Schema(implementation = BadRequest.class))}),
       @ApiResponse(responseCode = "404", description = "Book not found", content = {@Content(schema = @Schema(implementation = BookNotFoundException.class))}),
       @ApiResponse(responseCode = "500", description = "Internal Server Error", content = {@Content(schema = @Schema(implementation = RuntimeException.class))})
   })
